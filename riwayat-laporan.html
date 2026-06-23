@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Riwayat Laporan</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo-sidebar">
+            <h2>Facility Report</h2>
+        </div>
+
+        <div class="sidebar-menu">
+
+            <a href="dashboard-pelapor.html">
+                Dashboard
+            </a>
+
+            <a href="buat-laporan.html">
+                Buat Laporan
+            </a>
+
+            <a href="riwayat-laporan.html"
+               class="active">
+                Riwayat Laporan
+            </a>
+
+            <a href="profil.html">
+                Profil
+            </a>
+
+            <a href="index.html">
+                Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <main class="main-content">
+
+        <div class="header">
+
+            <h1>Riwayat Laporan</h1>
+
+            <p>
+                Daftar seluruh laporan yang pernah dikirim
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="filter-grid">
+
+                <input
+                type="text"
+                placeholder="Cari ID atau lokasi">
+
+                <select>
+
+                    <option>
+                        Semua Status
+                    </option>
+
+                    <option>
+                        Dilaporkan
+                    </option>
+
+                    <option>
+                        Diproses
+                    </option>
+
+                    <option>
+                        Selesai
+                    </option>
+
+                </select>
+
+                <select>
+
+                    <option>
+                        Semua Kategori
+                    </option>
+
+                    <option>
+                        AC
+                    </option>
+
+                    <option>
+                        Listrik
+                    </option>
+
+                    <option>
+                        Furniture
+                    </option>
+
+                    <option>
+                        Internet
+                    </option>
+
+                </select>
+
+                <button class="btn">
+                    Cari
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="table-container">
+
+                <table>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Tanggal</th>
+                        <th>Kategori</th>
+                        <th>Lokasi</th>
+                        <th>Urgensi</th>
+                        <th>Status</th>
+                        <th>Detail</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>LP-2026-001</td>
+                        <td>12 Mei 2026</td>
+                        <td>AC</td>
+                        <td>Gedung A Lt.2</td>
+                        <td>Tinggi</td>
+
+                        <td>
+
+                            <span class="badge badge-warning">
+                                Diproses
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                            onclick="openModal()">
+                                Lihat
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>LP-2026-002</td>
+                        <td>14 Mei 2026</td>
+                        <td>Listrik</td>
+                        <td>Lab Komputer</td>
+                        <td>Sedang</td>
+
+                        <td>
+
+                            <span class="badge badge-success">
+                                Selesai
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                            onclick="openModal()">
+                                Lihat
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<div
+id="detailModal"
+class="modal">
+
+    <div class="modal-content">
+
+        <h2>
+            Detail Laporan
+        </h2>
+
+        <hr style="margin:15px 0;">
+
+        <p><b>ID Laporan :</b> LP-2026-001</p>
+        <br>
+
+        <p><b>Kategori :</b> AC</p>
+        <br>
+
+        <p><b>Lokasi :</b> Gedung A Lt.2 Ruang 204</p>
+        <br>
+
+        <p><b>Urgensi :</b> Tinggi</p>
+        <br>
+
+        <p><b>Status :</b> Diproses</p>
+        <br>
+
+        <p>
+        <b>Kronologi :</b>
+        </p>
+
+        <p>
+        AC tidak mengeluarkan udara dingin.
+        Terdapat suara bising dan tetesan air.
+        </p>
+
+        <br>
+
+        <p>
+        <b>Catatan Admin :</b>
+        </p>
+
+        <p>
+        Sedang menunggu jadwal teknisi.
+        </p>
+
+        <br>
+
+        <button
+        class="btn"
+        onclick="closeModal()">
+
+            Tutup
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+function openModal(){
+
+document
+.getElementById(
+"detailModal"
+)
+.style.display =
+"flex";
+
+}
+
+function closeModal(){
+
+document
+.getElementById(
+"detailModal"
+)
+.style.display =
+"none";
+
+}
+
+</script>
+
+</body>
+</html>

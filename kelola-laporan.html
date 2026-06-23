@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Kelola Laporan</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<aside class="sidebar">
+
+<div class="logo-sidebar">
+
+<h2>Admin Panel</h2>
+
+</div>
+
+<div class="sidebar-menu">
+
+<a href="dashboard-admin.html">
+
+Dashboard
+
+</a>
+
+<a href="kelola-laporan.html"
+class="active">
+
+Kelola Laporan
+
+</a>
+
+<a href="monitoring.html">
+
+Monitoring
+
+</a>
+
+<a href="index.html">
+
+Logout
+
+</a>
+
+</div>
+
+</aside>
+
+<main class="main-content">
+
+<div class="header">
+
+<h1>
+Kelola Laporan
+</h1>
+
+<p>
+Manajemen seluruh laporan masuk
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="filter-grid">
+
+<input
+type="text"
+placeholder="Cari laporan">
+
+<select>
+
+<option>Semua Kategori</option>
+<option>AC</option>
+<option>Listrik</option>
+<option>Internet</option>
+<option>Furniture</option>
+
+</select>
+
+<select>
+
+<option>Semua Status</option>
+<option>Dilaporkan</option>
+<option>Diproses</option>
+<option>Selesai</option>
+
+</select>
+
+<button class="btn">
+
+Cari
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="table-container">
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Pelapor</th>
+<th>Kategori</th>
+<th>Lokasi</th>
+<th>Status</th>
+<th>Aksi</th>
+
+</tr>
+
+<tr>
+
+<td>LP-2026-001</td>
+<td>Marvella</td>
+<td>AC</td>
+<td>Gedung A Lt.2</td>
+
+<td>
+
+<span class="badge badge-warning">
+
+Diproses
+
+</span>
+
+</td>
+
+<td>
+
+<button
+onclick="openModal()">
+
+Detail
+
+</button>
+
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<div
+id="adminModal"
+class="modal">
+
+<div class="modal-content">
+
+<h2>
+Detail Laporan
+</h2>
+
+<hr style="margin:15px 0;">
+
+<p><b>ID :</b> LP-2026-001</p>
+
+<br>
+
+<p><b>Pelapor :</b> Marvella</p>
+
+<br>
+
+<p><b>Kategori :</b> AC</p>
+
+<br>
+
+<p><b>Lokasi :</b> Gedung A Lt.2</p>
+
+<br>
+
+<label>
+Update Status
+</label>
+
+<select>
+
+<option>Dilaporkan</option>
+<option selected>Diproses</option>
+<option>Selesai</option>
+
+</select>
+
+<br><br>
+
+<button class="btn">
+
+Simpan Perubahan
+
+</button>
+
+<br><br>
+
+<button
+class="btn"
+onclick="closeModal()">
+
+Tutup
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function openModal(){
+
+document
+.getElementById(
+"adminModal"
+)
+.style.display =
+"flex";
+
+}
+
+function closeModal(){
+
+document
+.getElementById(
+"adminModal"
+)
+.style.display =
+"none";
+
+}
+
+</script>
+
+</body>
+</html>

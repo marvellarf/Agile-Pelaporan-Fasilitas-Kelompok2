@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Admin</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo-sidebar">
+
+            <h2>
+                Admin Panel
+            </h2>
+
+        </div>
+
+        <div class="sidebar-menu">
+
+    <a href="dashboard-admin.html">
+        Dashboard
+    </a>
+
+    <a href="kelola-laporan.html">
+        Kelola Laporan
+    </a>
+
+    <a href="monitoring.html">
+        Monitoring
+    </a>
+
+    <a href="index.html">
+        Logout
+    </a>
+
+</div>
+
+    </aside>
+
+   <main class="main-content">
+
+    <div class="header">
+
+        <h1>
+            Dashboard Admin
+        </h1>
+
+        <p>
+            Ringkasan laporan fasilitas kampus
+        </p>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="card stat-card">
+
+            <h3>Total Laporan</h3>
+
+            <h2>35</h2>
+
+        </div>
+
+        <div class="card stat-card">
+
+            <h3>Dilaporkan</h3>
+
+            <h2>10</h2>
+
+        </div>
+
+        <div class="card stat-card">
+
+            <h3>Diproses</h3>
+
+            <h2>15</h2>
+
+        </div>
+
+        <div class="card stat-card">
+
+            <h3>Selesai</h3>
+
+            <h2>10</h2>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>
+            Ringkasan Sistem
+        </h2>
+
+        <br>
+
+        <p>
+            Sistem digunakan untuk menerima,
+            memonitor, dan mengelola laporan
+            kerusakan fasilitas kampus yang
+            dikirim oleh mahasiswa, dosen,
+            maupun staf.
+        </p>
+
+        <br>
+
+        <p>
+            Silakan gunakan menu
+            <b>Kelola Laporan</b>
+            untuk memproses laporan dan
+            menu
+            <b>Monitoring</b>
+            untuk melihat laporan
+            prioritas tinggi.
+        </p>
+
+    </div>
+
+</main>
+
+<!-- MODAL -->
+
+<div
+id="adminModal"
+class="modal">
+
+<div class="modal-content">
+
+<h2>
+Detail Laporan
+</h2>
+
+<hr style="margin:15px 0;">
+
+<p>
+<b>ID :</b>
+LP-2026-001
+</p>
+
+<br>
+
+<p>
+<b>Nama Pelapor :</b>
+Marvella Rizkia Fitra
+</p>
+
+<br>
+
+<p>
+<b>Kategori :</b>
+AC
+</p>
+
+<br>
+
+<p>
+<b>Lokasi :</b>
+Gedung A Lt.2 Ruang 204
+</p>
+
+<br>
+
+<p>
+<b>Urgensi :</b>
+Tinggi
+</p>
+
+<br>
+
+<p>
+<b>Status Saat Ini :</b>
+
+Diproses
+
+</p>
+
+<br>
+
+<p>
+<b>Kronologi :</b>
+</p>
+
+<p>
+
+AC tidak mengeluarkan udara dingin.
+Terdapat suara bising dan
+tetesan air pada unit indoor.
+
+</p>
+
+<br>
+
+<label>
+
+Update Status
+
+</label>
+
+<select>
+
+<option>
+Dilaporkan
+</option>
+
+<option selected>
+Diproses
+</option>
+
+<option>
+Selesai
+</option>
+
+</select>
+
+<br><br>
+
+<button class="btn">
+
+Simpan Perubahan
+
+</button>
+
+<br><br>
+
+<button
+class="btn"
+onclick="closeModal()">
+
+Tutup
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function openModal(){
+
+document
+.getElementById(
+"adminModal"
+)
+.style.display =
+"flex";
+
+}
+
+function closeModal(){
+
+document
+.getElementById(
+"adminModal"
+)
+.style.display =
+"none";
+
+}
+
+</script>
+
+</body>
+</html>
