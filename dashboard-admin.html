@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Admin</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <h2>Admin Panel</h2>
+
+        </div>
+
+        <div class="sidebar-menu">
+
+            <a href="#" class="active">
+                📊 Dashboard
+            </a>
+
+            <a href="#laporan">
+                📋 Kelola Laporan
+            </a>
+
+            <a href="#">
+                📈 Monitoring
+            </a>
+
+            <a href="#">
+                ⚙ Pengaturan
+            </a>
+
+            <a href="index.html">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Dashboard Admin</h1>
+
+                <p>
+                    Bagian Prasarana Kampus
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- STATISTIK -->
+
+        <div class="stats">
+
+            <div class="card stat-card">
+
+                <h4>📋 Total Laporan</h4>
+
+                <h2>32</h2>
+
+            </div>
+
+            <div class="card stat-card">
+
+                <h4>⚠ Dilaporkan</h4>
+
+                <h2>10</h2>
+
+            </div>
+
+            <div class="card stat-card">
+
+                <h4>🔧 Diproses</h4>
+
+                <h2>12</h2>
+
+            </div>
+
+            <div class="card stat-card">
+
+                <h4>✅ Selesai</h4>
+
+                <h2>10</h2>
+
+            </div>
+
+        </div>
+
+        <!-- FILTER -->
+
+        <div class="card">
+
+            <h2>
+                Filter Laporan
+            </h2>
+
+            <br>
+
+            <div class="filter-grid">
+
+                <input
+                    type="text"
+                    placeholder="Cari ID Laporan">
+
+                <select>
+
+                    <option>
+                        Semua Kategori
+                    </option>
+
+                    <option>
+                        Listrik
+                    </option>
+
+                    <option>
+                        AC
+                    </option>
+
+                    <option>
+                        Bangunan
+                    </option>
+
+                    <option>
+                        Furniture
+                    </option>
+
+                </select>
+
+                <select>
+
+                    <option>
+                        Semua Status
+                    </option>
+
+                    <option>
+                        Dilaporkan
+                    </option>
+
+                    <option>
+                        Diproses
+                    </option>
+
+                    <option>
+                        Selesai
+                    </option>
+
+                </select>
+
+                <button>
+                    Cari
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TABEL LAPORAN -->
+
+        <div class="card"
+             id="laporan">
+
+            <h2>
+                Manajemen Laporan
+            </h2>
+
+            <br>
+
+            <table>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Pelapor</th>
+
+                    <th>Kategori</th>
+
+                    <th>Lokasi</th>
+
+                    <th>Urgensi</th>
+
+                    <th>Status</th>
+
+                    <th>Aksi</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>LP001</td>
+
+                    <td>Budi</td>
+
+                    <td>Listrik</td>
+
+                    <td>Lab Komputer</td>
+
+                    <td>Tinggi</td>
+
+                    <td>
+
+                        <span class="badge badge-warning">
+
+                            Diproses
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button
+                        onclick="openDetail()">
+
+                            Detail
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>LP002</td>
+
+                    <td>Siti</td>
+
+                    <td>AC</td>
+
+                    <td>Gedung A</td>
+
+                    <td>Sedang</td>
+
+                    <td>
+
+                        <span class="badge badge-success">
+
+                            Selesai
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <button
+                        onclick="openDetail()">
+
+                            Detail
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- MODAL DETAIL -->
+
+<div id="detailModal"
+style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+display:none;
+justify-content:center;
+align-items:center;
+">
+
+<div class="card"
+style="
+width:550px;
+">
+
+<h2>
+Detail Laporan
+</h2>
+
+<hr style="margin:15px 0">
+
+<p>
+<b>ID :</b> LP001
+</p>
+
+<br>
+
+<p>
+<b>Nama Pelapor :</b>
+Budi Santoso
+</p>
+
+<br>
+
+<p>
+<b>Kategori :</b>
+Listrik
+</p>
+
+<br>
+
+<p>
+<b>Lokasi :</b>
+Lab Komputer
+</p>
+
+<br>
+
+<p>
+<b>Urgensi :</b>
+Tinggi
+</p>
+
+<br>
+
+<p>
+<b>Status Saat Ini :</b>
+
+<span class="badge badge-warning">
+
+Diproses
+
+</span>
+
+</p>
+
+<br>
+
+<p>
+<b>Kronologi :</b>
+
+Stop kontak terbakar dan
+tidak dapat digunakan.
+
+</p>
+
+<br>
+
+<label>
+Update Status
+</label>
+
+<select>
+
+<option>
+Dilaporkan
+</option>
+
+<option selected>
+Diproses
+</option>
+
+<option>
+Selesai
+</option>
+
+</select>
+
+<br><br>
+
+<button>
+
+Simpan Perubahan
+
+</button>
+
+<br><br>
+
+<button
+onclick="closeDetail()">
+
+Tutup
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function openDetail(){
+
+document
+.getElementById(
+"detailModal"
+)
+.style.display =
+"flex";
+
+}
+
+function closeDetail(){
+
+document
+.getElementById(
+"detailModal"
+)
+.style.display =
+"none";
+
+}
+
+</script>
+
+</body>
+</html>

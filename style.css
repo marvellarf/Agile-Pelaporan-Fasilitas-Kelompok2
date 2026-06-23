@@ -1,0 +1,487 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fafc;
+    color:#0f172a;
+}
+
+/* =========================
+   COLOR SYSTEM
+========================= */
+
+:root{
+
+    --primary:#2563eb;
+    --primary-light:#60a5fa;
+
+    --success:#22c55e;
+    --warning:#f59e0b;
+    --danger:#ef4444;
+
+    --bg:#f8fafc;
+    --white:#ffffff;
+
+    --text:#0f172a;
+    --text-secondary:#64748b;
+
+    --border:#e2e8f0;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+    text-decoration:none;
+}
+
+/* =========================
+   LOGIN & REGISTER
+========================= */
+
+.auth-page{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #0ea5e9
+    );
+
+    padding:30px;
+}
+
+.auth-card{
+
+    width:100%;
+    max-width:450px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.logo{
+
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.logo h1{
+
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.logo p{
+
+    color:var(--text-secondary);
+}
+
+.form-group{
+
+    margin-bottom:18px;
+}
+
+.form-group label{
+
+    display:block;
+    margin-bottom:6px;
+
+    font-size:14px;
+    font-weight:500;
+}
+
+.form-control{
+
+    width:100%;
+
+    padding:12px 15px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.form-control:focus{
+
+    border-color:var(--primary);
+}
+
+.btn{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn:hover{
+
+    background:#1d4ed8;
+}
+
+.auth-footer{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    color:var(--text-secondary);
+}
+
+.auth-footer a{
+
+    color:var(--primary);
+    font-weight:600;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard{
+
+    display:flex;
+    min-height:100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+
+    width:260px;
+
+    background:white;
+
+    border-right:1px solid var(--border);
+
+    padding:25px;
+}
+
+.sidebar-logo{
+
+    margin-bottom:40px;
+}
+
+.sidebar-logo h2{
+
+    color:var(--primary);
+}
+
+.sidebar-menu a{
+
+    display:block;
+
+    padding:14px;
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.sidebar-menu a:hover{
+
+    background:#eff6ff;
+
+    color:var(--primary);
+}
+
+.sidebar-menu .active{
+
+    background:#dbeafe;
+
+    color:var(--primary);
+
+    font-weight:600;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main{
+
+    flex:1;
+
+    padding:30px;
+}
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:25px;
+}
+
+.topbar h1{
+
+    font-size:28px;
+}
+
+.topbar p{
+
+    color:var(--text-secondary);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+    0 3px 15px rgba(0,0,0,.05);
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+
+    margin-bottom:25px;
+}
+
+.stat-card h4{
+
+    color:var(--text-secondary);
+
+    margin-bottom:10px;
+}
+
+.stat-card h2{
+
+    font-size:32px;
+}
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.full-width{
+
+    grid-column:1/3;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    outline:none;
+}
+
+textarea{
+
+    resize:none;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+th{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:15px;
+}
+
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid var(--border);
+}
+
+/* =========================
+   STATUS BADGE
+========================= */
+
+.badge{
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:500;
+}
+
+.badge-danger{
+
+    background:var(--danger);
+}
+
+.badge-warning{
+
+    background:var(--warning);
+}
+
+.badge-success{
+
+    background:var(--success);
+}
+
+/* =========================
+   FILTER
+========================= */
+
+.filter-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr 1fr 1fr;
+
+    gap:15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+    .stats{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .form-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .full-width{
+
+        grid-column:auto;
+    }
+
+    .filter-grid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .dashboard{
+
+        flex-direction:column;
+    }
+
+    .sidebar{
+
+        width:100%;
+    }
+
+    .stats{
+
+        grid-template-columns:1fr;
+    }
+
+}
